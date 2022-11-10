@@ -1,7 +1,6 @@
 import React from "react";
 import config from "../config.json";
 import styled from "styled-components";
-import { CSSReset } from "../src/components/CSSReset";
 import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/components/Timeline";
 
@@ -46,7 +45,6 @@ const StyledHeader = styled.div`
 		border-radius: 50%;
 	}
 	.user-info {
-		margin-top: 50px;
 		display: flex;
 		align-items: center;
 		width: 100%;
@@ -86,8 +84,7 @@ function Timeline({ searchValue, ...propriedades }) {
 		<StyledTimeline>
 			{playlistNames.map((playlistName) => {
 				const videos = propriedades.playlists[playlistName];
-				// console.log(playlistName);
-				// console.log(videos);
+
 				return (
 					<section key={playlistName}>
 						<h2>{playlistName}</h2>
